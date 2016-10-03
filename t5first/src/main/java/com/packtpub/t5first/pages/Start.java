@@ -2,12 +2,11 @@ package com.packtpub.t5first.pages;
 
 import java.util.Date;
 
-import org.apache.tapestry5.annotations.*;
-import org.apache.tapestry5.ioc.services.ApplicationDefaults;
-
+import org.apache.tapestry5.annotations.InjectPage;
+import org.apache.tapestry5.annotations.SessionState;
 
 import com.packtpub.t5first.util.User;
-//import org.apache.tapestry.annotations.ApplicationState;
+//import org.apache.tapestry5.annotations.ApplicationState;
 //import org.apache.tapestry.annotations.InjectPage;
 
 /**
@@ -18,7 +17,8 @@ public class Start {
 	@InjectPage
 	private Another another;
 
-	@ApplicationDefaults
+	//@ApplicationState
+	@SessionState
 	private User user;
 	
 	private boolean userExists; 

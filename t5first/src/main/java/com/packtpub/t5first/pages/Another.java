@@ -1,15 +1,15 @@
 package com.packtpub.t5first.pages;
 
-//import org.apache.tapestry.annotations.ApplicationState;
-
-import org.apache.tapestry5.ioc.services.ApplicationDefaults;
+import org.apache.tapestry5.annotations.SessionState;
 
 import com.packtpub.t5first.util.User;
+//import org.apache.tapestry5.ioc.services.ApplicationDefaults;
 
 
 public class Another {
 	
-	@ApplicationDefaults
+	//@ApplicationDefaults
+	@SessionState
 	private User myUser;
 	
 	// @Persist
