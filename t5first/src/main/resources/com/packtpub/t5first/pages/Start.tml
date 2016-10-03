@@ -1,0 +1,34 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <head>
+        <title>Tapestry Start Page</title>
+    </head>
+    <body>
+        <h1>Tapestry Start Page</h1>
+
+        <p> This is the start page for this application, a good place to start your modifications.
+            Just to prove this is live: </p>
+
+        <!-- <p> The current time is: ${currentTime}. </p>
+        <p> The same date and time in milliseconds is: ${currentTime.time}. </p>
+		<p>And here is the hash code for it: ${currentTime.hashCode()}.</p> -->
+
+		<!-- <p>Here is the value: ${someValue}</p> -->
+		
+		<!-- <t:if t:test="userExists">
+			<p>The user is ${user.firstName} ${user.lastName}</p>
+		</t:if> -->
+
+        <p>
+            <!--  t:PageLink t:page="Another">Go to Another page</t:PageLink -->
+            <a href="#" t:type="PageLink" t:page="Another">Go to Another page</a>
+        </p>
+        <p>Submit a message:</p>
+        <t:form t:id="userInputForm">
+            <!-- t:textfield t:value="message"/ -->
+            <input type="text" t:type="textfield" t:value="message"/>
+            <input type="submit" value="Submit"/>
+        </t:form>
+        
+        <a href="#" t:type="PageLink" t:page="secure/Payment">Go to the secure Payment page</a>
+    </body>
+</html>
