@@ -12,11 +12,11 @@
         <p> The same date and time in milliseconds is: ${currentTime.time}. </p>
 		<p>And here is the hash code for it: ${currentTime.hashCode()}.</p> -->
 
-		<!-- <p>Here is the value: ${someValue}</p> -->
+		<p>Here is the value: ${someValue}</p>
 		
-		<!-- <t:if t:test="userExists">
+		<t:if t:test="userExists">
 			<p>The user is ${user.firstName} ${user.lastName}</p>
-		</t:if> -->
+		</t:if>
 
         <p>
             <!--  t:PageLink t:page="Another">Go to Another page</t:PageLink -->
