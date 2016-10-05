@@ -1,5 +1,6 @@
 package com.packtpub.celebrities.pages;
 
+import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.SelectModel;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
@@ -54,7 +55,8 @@ public class Registration {
 		return nextPage;
 	}
 
-	@OnEvent(component="submitButton")
+	// @OnEvent(component="submitButton")
+	@OnEvent(component="submitButton" , value = EventConstants.SELECTED)
 	void onSubmitButton() {
 		System.out.println("Submit button was pressed!");
 		User newUser = new User("John", "Johnson");
@@ -62,7 +64,7 @@ public class Registration {
 		nextPage = ShowAll.class;
 	}
 
-	@OnEvent(component="resetButton")
+	@OnEvent(component="resetButton", value = EventConstants.SELECTED)
 	void onResetButton() { 
 		System.out.println("Resetting...");
 		userName = null;
