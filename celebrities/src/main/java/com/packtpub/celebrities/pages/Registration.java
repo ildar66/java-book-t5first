@@ -31,7 +31,7 @@ public class Registration {
 	private String password2;
 
 	@Persist
-	private Gender gender = Gender.FEMALE;
+	private Gender gender;// = Gender.FEMALE;
 
 	@Persist
 	private boolean subscribe;

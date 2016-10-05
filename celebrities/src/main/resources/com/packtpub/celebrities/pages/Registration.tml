@@ -23,7 +23,7 @@
                 <tr>
                     <td><t:label t:for="password2">
 								Label for password 2</t:label>:</td>
-                    <td><input type="text" t:type="passwordfield" 							t:id="password2" t:label="Repeat password" 
+                    <td><input type="text" t:type="passwordfield" t:id="password2" t:label="Repeat password" 
 							t:value="password2"/></td>
                 </tr>
                 </t:if>
