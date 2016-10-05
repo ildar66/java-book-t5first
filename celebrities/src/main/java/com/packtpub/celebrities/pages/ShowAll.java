@@ -4,6 +4,7 @@ import java.text.Format;
 import java.util.List;
 
 import org.apache.tapestry5.annotations.InjectPage;
+//import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.SessionState;
 
 import com.packtpub.celebrities.data.IDataSource;
@@ -31,7 +32,7 @@ public class ShowAll {
         return null;
     }
     
- /*   @OnEvent(component="detailsLink")
+/*    @OnEvent(component="detailsLink")
     Object onShowDetails(long id) {
         Celebrity celebrity = 
 				dataSource.getCelebrityById(id);

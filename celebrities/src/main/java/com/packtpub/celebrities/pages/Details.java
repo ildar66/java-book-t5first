@@ -2,6 +2,7 @@ package com.packtpub.celebrities.pages;
 
 import java.text.Format;
 
+import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.SessionState;
 
 import com.packtpub.celebrities.data.IDataSource;
@@ -13,7 +14,7 @@ public class Details {
 	//@ApplicationState
 	@SessionState
 	private IDataSource dataSource;
-	
+	//@Persist
 	private Celebrity celebrity;
 	
 	void onActivate(long id) {
