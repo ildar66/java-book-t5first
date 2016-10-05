@@ -1,21 +1,22 @@
 package com.packtpub.celebrities.pages;
 
-/*import org.apache.tapestry.SelectModel;
-import org.apache.tapestry.annotations.ApplicationState;
-import org.apache.tapestry.annotations.OnEvent;
-import org.apache.tapestry.annotations.Persist;
-import org.apache.tapestry.ioc.Messages;
-import org.apache.tapestry.ioc.annotations.Inject;
-import org.apache.tapestry.util.EnumSelectModel;
+import org.apache.tapestry5.SelectModel;
+import org.apache.tapestry5.annotations.OnEvent;
+import org.apache.tapestry5.annotations.Persist;
+import org.apache.tapestry5.annotations.SessionState;
+import org.apache.tapestry5.ioc.Messages;
+import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.util.EnumSelectModel;
 
 import com.packtpub.celebrities.model.Country;
 import com.packtpub.celebrities.model.Gender;
-import com.packtpub.celebrities.model.User;*/
+import com.packtpub.celebrities.model.User;
 
-public class Registration {/*
+public class Registration {
 
-	@SuppressWarnings("unused")
-	@ApplicationState
+	//@SuppressWarnings("unused")
+	//@ApplicationState
+	@SessionState
 	private User user;
 	
 	@Inject
@@ -152,4 +153,4 @@ public class Registration {/*
 	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
-*/}
+}

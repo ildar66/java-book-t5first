@@ -1,22 +1,24 @@
 package com.packtpub.celebrities.pages;
 
-/*import java.text.Format;
+import java.text.Format;
 import java.util.List;
 
-import org.apache.tapestry.annotations.ApplicationState;
-import org.apache.tapestry.annotations.InjectPage;
+import org.apache.tapestry5.annotations.InjectPage;
+import org.apache.tapestry5.annotations.SessionState;
 
 import com.packtpub.celebrities.data.IDataSource;
 import com.packtpub.celebrities.model.Celebrity;
 import com.packtpub.celebrities.model.User;
-import com.packtpub.celebrities.util.Formats;*/
+import com.packtpub.celebrities.util.Formats;
 
-public class ShowAll {/*
-	@ApplicationState
+public class ShowAll {
+	//@ApplicationState
+	@SessionState
     private User user;
     private boolean userExists;
     
-    @ApplicationState
+    //@ApplicationState
+    @SessionState
     private IDataSource dataSource;
     
     @InjectPage
@@ -29,13 +31,13 @@ public class ShowAll {/*
         return null;
     }
     
-    @OnEvent(component="detailsLink")
+ /*   @OnEvent(component="detailsLink")
     Object onShowDetails(long id) {
         Celebrity celebrity = 
 				dataSource.getCelebrityById(id);
         detailsPage.setCelebrity(celebrity);
         return detailsPage;
-    }
+    }*/
     
     public List<Celebrity> getAllCelebrities() {
         return dataSource.getAllCelebrities();
@@ -51,4 +53,4 @@ public class ShowAll {/*
     public Format getDateFormat() {
         return Formats.getDateFormat();
     }
-*/}
+}
