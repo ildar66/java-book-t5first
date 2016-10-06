@@ -25,7 +25,8 @@
         </table>
 		  <br/> -->
 
-	<t:grid t:source="allCelebrities" rowsPerPage="5" pagerPosition="bottom" row="celebrity"
+	<!-- <t:grid t:source="allCelebrities" rowsPerPage="5" pagerPosition="bottom" row="celebrity" -->
+	<t:grid t:source="celebritySource" rowsPerPage="5" pagerPosition="bottom" row="celebrity"
 		 include="lastName,firstName,occupation,dateOfBirth">
 		<t:parameter name="lastNameCell">
 			<t:pagelink t:page="details" t:context="celebrity.id">
