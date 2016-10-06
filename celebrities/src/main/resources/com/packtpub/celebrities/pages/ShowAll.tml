@@ -26,7 +26,7 @@
 		  <br/> -->
 
 	<t:grid t:source="allCelebrities" rowsPerPage="5" pagerPosition="bottom" row="celebrity"
-		 remove="id, biography, birthDateVerified" reorder="lastName,firstName,occupation,dateOfBirth">
+		 include="lastName,firstName,occupation,dateOfBirth">
 		<t:parameter name="lastNameCell">
 			<t:pagelink t:page="details" t:context="celebrity.id">
 				${celebrity.lastName}
