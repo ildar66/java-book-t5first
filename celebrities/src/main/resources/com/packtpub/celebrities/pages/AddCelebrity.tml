@@ -16,8 +16,14 @@
     		</table>
   			</t:parameter>
         </t:beaneditform> -->
-        
-        <t:beaneditform t:id="celebrity"/>
-        
-    </body>
+
+	<t:beaneditform t:id="celebrity" t:submitLabel="Save" remove="id"
+		reorder="firstName,lastName,dateOfBirth,birthDateVerified,occupation,biography">
+		<t:parameter name="biography">
+			<t:label for="biography" />
+			<t:textarea t:id="biography" t:value="celebrity.biography" cols="30" rows="5" />
+		</t:parameter>
+	</t:beaneditform>
+
+</body>
 </html>

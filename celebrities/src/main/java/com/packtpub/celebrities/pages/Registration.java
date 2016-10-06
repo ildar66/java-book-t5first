@@ -1,5 +1,7 @@
 package com.packtpub.celebrities.pages;
 
+import java.util.Date;
+
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.SelectModel;
 import org.apache.tapestry5.annotations.OnEvent;
@@ -15,11 +17,11 @@ import com.packtpub.celebrities.model.User;
 
 public class Registration {
 
-	//@SuppressWarnings("unused")
-	//@ApplicationState
+	// @SuppressWarnings("unused")
+	// @ApplicationState
 	@SessionState
 	private User user;
-	
+
 	@Inject
 	private Messages messages;
 
@@ -31,8 +33,9 @@ public class Registration {
 
 	private String password2;
 
-/*	@Persist
-	private Gender gender; */
+	/*
+	 * @Persist private Gender gender;
+	 */
 	private Gender gender = Gender.FEMALE;
 
 	@Persist
@@ -40,13 +43,24 @@ public class Registration {
 
 	@Persist
 	private String email;
-	
+
 	@Persist
 	private Country country;
 
 	private boolean unsubscribe;
 
 	private Class nextPage;
+
+	@Persist
+	private Date dateOfBirth;
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 
 	Object onSubmitFromRegistrationForm() {
 		System.out.println("The form was submitted!");
@@ -56,7 +70,7 @@ public class Registration {
 	}
 
 	// @OnEvent(component="submitButton")
-	@OnEvent(component="submitButton" , value = EventConstants.SELECTED)
+	@OnEvent(component = "submitButton", value = EventConstants.SELECTED)
 	void onSubmitButton() {
 		System.out.println("Submit button was pressed!");
 		User newUser = new User("John", "Johnson");
@@ -64,8 +78,8 @@ public class Registration {
 		nextPage = ShowAll.class;
 	}
 
-	@OnEvent(component="resetButton", value = EventConstants.SELECTED)
-	void onResetButton() { 
+	@OnEvent(component = "resetButton", value = EventConstants.SELECTED)
+	void onResetButton() {
 		System.out.println("Resetting...");
 		userName = null;
 		password = null;
@@ -73,11 +87,11 @@ public class Registration {
 		gender = null;
 		subscribe = false;
 	}
-	
+
 	public SelectModel getCountries() {
 		return new EnumSelectModel(Country.class, messages);
 	}
-	
+
 	public Country getCountry() {
 		return country;
 	}
