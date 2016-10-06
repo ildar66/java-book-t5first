@@ -2,6 +2,8 @@ package com.packtpub.celebrities.model;
 
 import java.util.Date;
 
+import org.apache.tapestry5.ioc.annotations.Inject;
+
 public class Celebrity {
 	private long id;
 	private String firstName;
@@ -11,6 +13,7 @@ public class Celebrity {
 	private String biography;
 	private boolean birthDateVerified;
 
+	@Inject
 	public Celebrity() {
 	}
 
