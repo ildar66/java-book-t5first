@@ -34,8 +34,9 @@
 			</t:pagelink>
 		</t:parameter>
 	</t:grid>
-
-	<a href="#" t:type="PageLink" t:page="Start">
-				Back to the Start Page</a>
+	
+	<a href="#" t:type="PageLink" t:page="AddCelebrity">Add new Celebrity</a><br/>
+	
+	<a href="#" t:type="PageLink" t:page="Start">Back to the Start Page</a>
     </body>
 </html>

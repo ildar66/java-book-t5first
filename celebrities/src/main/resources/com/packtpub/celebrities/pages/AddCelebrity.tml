@@ -1,0 +1,23 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+    <head>
+        <title>Celebrity Collector: Adding New Celebrity</title>
+        <!-- <link rel="stylesheet" href="${styles}" type="text/css"/> -->
+    </head>
+    <body>
+        <h1>Adding New Celebrity</h1>
+<!-- 
+        <t:beaneditform t:id="celebrity" t:submitLabel="Save" remove="id"
+        	reorder="firstName,lastName,dateOfBirth,birthDateVerified,occupation,biography">
+        	<t:parameter name="biography">
+        	<table cellpadding="0" cellspacing="0"><tr><td valign="top">
+    			<t:label for="biography"/></td>
+    			<td><t:fckeditor.editor t:id="biography" t:value="celebrity.biography" 
+    				t:toolbarSet="Medium" t:width="350" t:height="200"/></td></tr>
+    		</table>
+  			</t:parameter>
+        </t:beaneditform> -->
+        
+        <t:beaneditform t:id="celebrity"/>
+        
+    </body>
+</html>
