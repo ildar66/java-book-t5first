@@ -5,12 +5,12 @@
     <body>
         <h1>All Celebrities in Collection</h1>
 
-        <table width="100%">
+ <!--        <table width="100%">
             <tr t:type="loop" t:source="allCelebrities" 
 							t:value="celebrity">
                 <td>
-                	<!-- <a href="#" t:type="ActionLink" t:context="celebrity.id" t:id="detailsLink">
-						${celebrity.lastName}</a> -->
+                	<a href="#" t:type="ActionLink" t:context="celebrity.id" t:id="detailsLink">
+						${celebrity.lastName}</a>
 					<a href="#" t:type="PageLink" t:page="Details" t:context="celebrity.id">
     					${celebrity.lastName}
 					</a>
@@ -23,7 +23,10 @@
                 <td>${celebrity.occupation}</td>
             </tr>
         </table>
-		  <br/>
+		  <br/> -->
+		  
+		<t:grid t:source="allCelebrities"/>
+		
         <a href="#" t:type="PageLink" t:page="Start">
 				Back to the Start Page</a>
     </body>
