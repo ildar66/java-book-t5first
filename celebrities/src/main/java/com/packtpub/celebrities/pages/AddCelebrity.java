@@ -13,7 +13,7 @@ public class AddCelebrity {
 	// @ApplicationState
 	@SessionState
 	private IDataSource dataSource;
-	
+
 	@Inject
 	@Path("context:assets/styles.css")
 	private Asset styles;
@@ -25,10 +25,11 @@ public class AddCelebrity {
 	@Persist
 	private Celebrity celebrity;
 
-	/*
-	 * Object onSubmitFromCelebrity() { dataSource.addCelebrity(celebrity);
-	 * return ShowAll.class; }
-	 */
+	Object onSubmitFromCelebrity() {
+		//dataSource.addCelebrity(celebrity);
+		dataSource.addCelebrity((Celebrity) celebrity.clone());
+		return ShowAll.class;
+	}
 
 	public Celebrity getCelebrity() {
 		return celebrity;

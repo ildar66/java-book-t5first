@@ -24,7 +24,11 @@
                 <td>Occupation:</td>
                 <td>${celebrity.occupation}</td>
             </tr>
-        </table>
+			<tr>
+				<td valign="top">Biography:</td>
+				<td><t:outputraw t:value="celebrity.biography" /></td>
+			</tr>
+	</table>
         <a href="#" t:type="PageLink" t:page="ShowAll">
 				Back to All Celebrities</a>
     </body>

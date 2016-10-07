@@ -4,7 +4,7 @@ import java.util.Date;
 
 import org.apache.tapestry5.ioc.annotations.Inject;
 
-public class Celebrity {
+public class Celebrity implements Cloneable {
 	private long id;
 	private String firstName;
 	private String lastName;
@@ -23,6 +23,17 @@ public class Celebrity {
 		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
 		this.occupation = occupation;
+	}
+
+	@Override
+	public Object clone() {
+		Object result = null;
+		try {
+			result = super.clone();
+		} catch (CloneNotSupportedException ignore) {
+			// ignore
+		}
+		return result;
 	}
 
 	public String getFirstName() {
