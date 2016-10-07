@@ -8,6 +8,7 @@
         <p> Log in here: </p>
 
         <t:form t:id="loginForm">
+        	<t:errors/>
             <table>
                 <tr>
                     <td>
@@ -15,8 +16,8 @@
 								Label for the first text box</t:label>:
                     </td>
                     <td>
-                        <input type="text" t:id="userName" 
-								t:type="TextField" t:value="userName"/>
+                        <input type="text" t:id="userName" t:type="TextField" t:value="userName"
+                        	t:label="User Name" t:validate="required"/>
                     </td>
                 </tr>
                 <tr>
@@ -25,8 +26,8 @@
 								The second label</t:label>:
                     </td>
                     <td>
-                        <input type="text" t:id="password" 
-								t:type="PasswordField" t:value="password"/>
+                        <input type="text" t:id="password" t:type="PasswordField" t:value="password"
+                        	t:label="Password" t:validate="required"/>
                     </td>
                 </tr>
                 <tr>
