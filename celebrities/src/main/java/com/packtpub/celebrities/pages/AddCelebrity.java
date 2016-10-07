@@ -10,25 +10,25 @@ import com.packtpub.celebrities.data.IDataSource;
 import com.packtpub.celebrities.model.Celebrity;
 
 public class AddCelebrity {
-/*	@Inject
+	// @ApplicationState
+	@SessionState
+	private IDataSource dataSource;
+	
+	@Inject
 	@Path("context:assets/styles.css")
 	private Asset styles;
 
-	//@ApplicationState
-	@SessionState
-	private IDataSource dataSource;
-
 	public Asset getStyles() {
 		return styles;
-	}*/
+	}
 
 	@Persist
 	private Celebrity celebrity;
 
-/*	Object onSubmitFromCelebrity() {
-		dataSource.addCelebrity(celebrity);
-		return ShowAll.class;
-	}*/
+	/*
+	 * Object onSubmitFromCelebrity() { dataSource.addCelebrity(celebrity);
+	 * return ShowAll.class; }
+	 */
 
 	public Celebrity getCelebrity() {
 		return celebrity;
