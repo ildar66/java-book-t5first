@@ -19,3 +19,7 @@ input.t-beaneditor-submit {
   position: relative;
   left: 150px;
 }
+
+DIV.t-error LI {
+  margin-left: 20px;
+}

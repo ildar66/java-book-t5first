@@ -1,7 +1,10 @@
 package com.packtpub.celebrities.pages;
 
 //import org.apache.tapestry.annotations.ApplicationState;
+import org.apache.tapestry5.Asset;
+import org.apache.tapestry5.annotations.Path;
 import org.apache.tapestry5.annotations.SessionState;
+import org.apache.tapestry5.ioc.annotations.Inject;
 
 import com.packtpub.celebrities.model.User;
 import com.packtpub.celebrities.util.Security;
@@ -10,6 +13,14 @@ import com.packtpub.celebrities.util.Security;
  * Start page of application celebrities.
  */
 public class Start {
+	@Inject
+	@Path("context:assets/styles.css")
+	private Asset styles;
+
+	public Asset getStyles() {
+		return styles;
+	}
+
 	private String userName;
 	private String password;
 
