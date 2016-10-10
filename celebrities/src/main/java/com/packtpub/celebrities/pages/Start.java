@@ -29,7 +29,7 @@ public class Start {
 	private User user;
 
 	Object onSubmitFromLoginForm() {
-		Class nextPage = null;
+		Class<?> nextPage = null;
 		User authenticatedUser = null;
 		authenticatedUser = Security.authenticate(userName, password);
 		if (authenticatedUser != null) {

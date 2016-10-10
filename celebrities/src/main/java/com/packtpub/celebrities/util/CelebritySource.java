@@ -40,7 +40,7 @@ public class CelebritySource implements GridDataSource {
 		return selection.get(i - this.indexFrom);
 	}
 
-	public Class getRowType() {
+	public Class<Celebrity> getRowType() {
 		return Celebrity.class;
 	}
 

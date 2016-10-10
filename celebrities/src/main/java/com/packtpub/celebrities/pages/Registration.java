@@ -49,10 +49,21 @@ public class Registration {
 
 	private boolean unsubscribe;
 
-	private Class nextPage;
+	private Class<ShowAll> nextPage;
 
 	@Persist
 	private Date dateOfBirth;
+	
+	@Persist
+	private double age;
+
+	public double getAge() {
+		return age;
+	}
+
+	public void setAge(double age) {
+		this.age = age;
+	}
 
 	public Date getDateOfBirth() {
 		return dateOfBirth;
