@@ -72,13 +72,38 @@ public class Registration {
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-
+	
+/*	//@OnEvent(value="submit", component="registrationForm")
 	Object onSubmitFromRegistrationForm() {
 		System.out.println("The form was submitted!");
 		if (unsubscribe)
 			subscribe = false;
 		return nextPage;
 	}
+	*/
+	void onSubmit() {
+		System.out.println("The form was submitted!");
+	}
+
+	void onValidate() {
+		System.out.println("In onValidate.");
+//		if (!password.equals(password2)) {
+//			password = null;
+//			registrationForm.recordError(passwordField, messages.get("passwords-dont-match"));
+//		}
+	}
+
+	Object onSuccess() {
+		System.out.println("In onSuccess.");
+		if (unsubscribe)
+			subscribe = false;
+		return nextPage;
+	}
+
+	void onFailure() {
+		System.out.println("In onFailure.");
+	}
+
 
 	// @OnEvent(component="submitButton")
 	@OnEvent(component = "submitButton", value = EventConstants.SELECTED)
