@@ -2,11 +2,16 @@ package com.packtpub.celebrities.pages;
 
 import java.util.Date;
 
+import org.apache.tapestry5.Asset;
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.SelectModel;
+import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.OnEvent;
+import org.apache.tapestry5.annotations.Path;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.SessionState;
+import org.apache.tapestry5.corelib.components.Form;
+import org.apache.tapestry5.corelib.components.PasswordField;
 import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.util.EnumSelectModel;
@@ -17,6 +22,14 @@ import com.packtpub.celebrities.model.User;
 
 public class Registration {
 
+	@Inject
+	@Path("context:assets/styles.css")
+	private Asset styles;
+
+	public Asset getStyles() {
+		return styles;
+	}
+
 	// @SuppressWarnings("unused")
 	// @ApplicationState
 	@SessionState
@@ -24,6 +37,11 @@ public class Registration {
 
 	@Inject
 	private Messages messages;
+
+	@Component
+	private Form registrationForm;
+	@Component(id = "password")
+	private PasswordField passwordField;
 
 	@Persist
 	private String userName;
@@ -53,7 +71,7 @@ public class Registration {
 
 	@Persist
 	private Date dateOfBirth;
-	
+
 	@Persist
 	private double age;
 
@@ -72,25 +90,26 @@ public class Registration {
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	
-/*	//@OnEvent(value="submit", component="registrationForm")
-	Object onSubmitFromRegistrationForm() {
-		System.out.println("The form was submitted!");
-		if (unsubscribe)
-			subscribe = false;
-		return nextPage;
-	}
-	*/
+
+	/*
+	 * //@OnEvent(value="submit", component="registrationForm") Object
+	 * onSubmitFromRegistrationForm() {
+	 * System.out.println("The form was submitted!"); if (unsubscribe) subscribe
+	 * = false; return nextPage; }
+	 */
 	void onSubmit() {
 		System.out.println("The form was submitted!");
 	}
 
 	void onValidate() {
 		System.out.println("In onValidate.");
-//		if (!password.equals(password2)) {
-//			password = null;
-//			registrationForm.recordError(passwordField, messages.get("passwords-dont-match"));
-//		}
+		System.out.println("=======password=" + password);
+		System.out.println("=======password2=" + password2);
+		if (password != null && password2 != null && !password.equals(password2)) {
+			password = null;
+			registrationForm.recordError(passwordField,
+					messages.get("passwords-dont-match"));
+		}
 	}
 
 	Object onSuccess() {
@@ -103,7 +122,6 @@ public class Registration {
 	void onFailure() {
 		System.out.println("In onFailure.");
 	}
-
 
 	// @OnEvent(component="submitButton")
 	@OnEvent(component = "submitButton", value = EventConstants.SELECTED)
@@ -137,7 +155,7 @@ public class Registration {
 	}
 
 	public boolean isPasswordNotSubmitted() {
-		return userName == null;
+		return userName == null || password == null;
 	}
 
 	public boolean isUnsubscribe() {

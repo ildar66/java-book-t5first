@@ -2,8 +2,11 @@ package com.packtpub.celebrities.pages;
 
 //import org.apache.tapestry.annotations.ApplicationState;
 import org.apache.tapestry5.Asset;
+import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.Path;
 import org.apache.tapestry5.annotations.SessionState;
+import org.apache.tapestry5.corelib.components.Form;
+import org.apache.tapestry5.ioc.Messages;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
 import com.packtpub.celebrities.model.User;
@@ -28,17 +31,23 @@ public class Start {
 	@SessionState
 	private User user;
 
-	Object onSubmitFromLoginForm() {
-		Class<?> nextPage = null;
-		User authenticatedUser = null;
-		authenticatedUser = Security.authenticate(userName, password);
+	@Component
+	private Form loginForm;
+
+	@Inject
+	private Messages messages;
+
+	Object onSuccess() {
+		return ShowAll.class;
+	}
+
+	void onValidate() {
+		User authenticatedUser = Security.authenticate(userName, password);
 		if (authenticatedUser != null) {
 			user = authenticatedUser;
-			nextPage = ShowAll.class;
 		} else {
-			nextPage = Registration.class;
+			loginForm.recordError(messages.get("authentication-failed"));
 		}
-		return nextPage;
 	}
 
 	public String getUserName() {
