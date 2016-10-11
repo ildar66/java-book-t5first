@@ -2,6 +2,7 @@ package com.packtpub.celebrities.model;
 
 import java.util.Date;
 
+import org.apache.tapestry5.beaneditor.Validate;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
 public class Celebrity implements Cloneable {
@@ -36,6 +37,7 @@ public class Celebrity implements Cloneable {
 		return result;
 	}
 
+	@Validate("required")
 	public String getFirstName() {
 		return firstName;
 	}
