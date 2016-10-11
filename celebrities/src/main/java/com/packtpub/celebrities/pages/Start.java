@@ -42,11 +42,15 @@ public class Start {
 	}
 
 	void onValidate() {
-		User authenticatedUser = Security.authenticate(userName, password);
-		if (authenticatedUser != null) {
-			user = authenticatedUser;
-		} else {
-			loginForm.recordError(messages.get("authentication-failed"));
+		System.out.println("================onValidate userName=" + userName
+				+ " password=" + password);
+		if (userName != null && password != null) {
+			User authenticatedUser = Security.authenticate(userName, password);
+			if (authenticatedUser != null) {
+				user = authenticatedUser;
+			} else {
+				loginForm.recordError(messages.get("authentication-failed"));
+			}
 		}
 	}
 
