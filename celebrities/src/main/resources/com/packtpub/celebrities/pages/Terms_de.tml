@@ -1,8 +1,4 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
-    <head>
-        <title>Terms and Conditions in German</title>
-    </head>
-    <body>
-        <p>Same terms and conditions but in German.</p>
-    </body>
-</html>
+<t:border t:pageTitle="Registration"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<p>Same terms and conditions but in German.</p>
+</t:border>

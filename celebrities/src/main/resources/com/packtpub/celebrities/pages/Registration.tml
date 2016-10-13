@@ -1,9 +1,4 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
-    <head>
-        <title>Celebrity Collector: Registration</title>
-    </head>
-    <body>
-        <h1>Registration</h1>
+<t:border t:pageTitle="Registration" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">        <h1>Registration</h1>
 
         <t:form t:id="registrationForm">
         	<t:errors/>
@@ -87,5 +82,4 @@
         <br/>
         <a href="#" t:type="PageLink" t:page="Start">
 				Back to the Start Page</a>
-    </body>
-</html>
+    </t:border>

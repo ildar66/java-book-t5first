@@ -2,12 +2,10 @@ package com.packtpub.celebrities.pages;
 
 import java.util.Date;
 
-import org.apache.tapestry5.Asset;
 import org.apache.tapestry5.EventConstants;
 import org.apache.tapestry5.SelectModel;
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.OnEvent;
-import org.apache.tapestry5.annotations.Path;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.corelib.components.Form;
@@ -21,15 +19,6 @@ import com.packtpub.celebrities.model.Gender;
 import com.packtpub.celebrities.model.User;
 
 public class Registration {
-
-	@Inject
-	@Path("context:assets/styles.css")
-	private Asset styles;
-
-	public Asset getStyles() {
-		return styles;
-	}
-
 	// @SuppressWarnings("unused")
 	// @ApplicationState
 	@SessionState

@@ -23,3 +23,15 @@ input.t-beaneditor-submit {
 DIV.t-error LI {
   margin-left: 20px;
 }
+
+body, table, input, select {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #204060;
+}

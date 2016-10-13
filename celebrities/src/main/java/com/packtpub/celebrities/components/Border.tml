@@ -1,0 +1,13 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<head>
+		<title>Celebrity Collector</title>
+		<link rel="stylesheet" href="${asset:context:/assets/styles.css}" type="text/css" />
+	</head>
+	<body>
+		<p align="right">
+			<img src="${asset:context:/assets/flag.gif}" align="middle" />
+			<t:actionlink t:id="switchlocale">${localeLabel}</t:actionlink>
+		</p>
+		<t:body />
+	</body>
+</html>

@@ -1,9 +1,4 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
-    <head>
-        <title>Celebrity Collector: Adding New Celebrity</title>
-        <link rel="stylesheet" href="${styles}" type="text/css"/>
-    </head>
-    <body>
+<t:border xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
         <h1>Adding New Celebrity</h1>
 <!-- 
         <t:beaneditform t:id="celebrity" t:submitLabel="Save" remove="id"
@@ -25,5 +20,4 @@
 		</t:parameter>
 	</t:beaneditform>
 
-</body>
-</html>
+</t:border>

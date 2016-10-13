@@ -1,9 +1,4 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
-    <head>
-        <title>Celebrity Collector: All Celebrities</title>
-    </head>
-    <body>
-        <h1>All Celebrities in Collection</h1>
+<t:border t:pageTitle="Registration" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">        <h1>All Celebrities in Collection</h1>
 
  <!--        <table width="100%">
             <tr t:type="loop" t:source="allCelebrities" 
@@ -38,5 +33,4 @@
 	<a href="#" t:type="PageLink" t:page="AddCelebrity">Add new Celebrity</a><br/>
 	
 	<a href="#" t:type="PageLink" t:page="Start">Back to the Start Page</a>
-    </body>
-</html>
+ </t:border>

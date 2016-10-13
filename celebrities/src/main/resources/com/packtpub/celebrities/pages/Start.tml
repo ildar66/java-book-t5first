@@ -1,16 +1,5 @@
-<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
-    <head>
-        <title>${message:celebrity-collector}</title>
-        <link rel="stylesheet" href="${styles}" type="text/css"/>
-    </head>
-    <body>
-	<p align="right">
-		<img src="${asset:context:/assets/flag.gif}" align="middle" />
-		<t:actionlink t:id="switchlocale">
-	    	${localeLabel}
-	  	</t:actionlink>
-	</p>
-	<h1>${message:celebrity-collector}</h1>
+	<t:border xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+		<h1>${message:celebrity-collector}</h1>
 
         <p> ${message:login-here}: </p>
 
@@ -49,5 +38,4 @@
         <p>
             <t:pagelink t:page="terms">Terms and Conditions</t:pagelink>
         </p>
-    </body>
-</html>
+    </t:border>
