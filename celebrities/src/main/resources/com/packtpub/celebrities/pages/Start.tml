@@ -46,5 +46,8 @@
             <a href="#" t:type="PageLink" t:page="Registration">
 					${orRegisterLabel}</a>
         </p>
+        <p>
+            <t:pagelink t:page="terms">Terms and Conditions</t:pagelink>
+        </p>
     </body>
 </html>
