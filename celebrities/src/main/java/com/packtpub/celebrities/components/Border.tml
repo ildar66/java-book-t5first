@@ -8,6 +8,23 @@
 			<img src="${asset:context:/assets/flag.gif}" align="middle" />
 			<t:actionlink t:id="switchlocale">${localeLabel}</t:actionlink>
 		</p>
-		<t:body />
+		<table>
+			<tr>
+				<td width="100" valign="top">
+					<br/>
+					<br/>
+					<br/>
+					<t:if t:test="notStart">
+		  				<t:pagelink t:page="Start">Home</t:pagelink><br/>
+		  				<t:pagelink t:page="Registration" t:disabled="registration">Registration</t:pagelink><br/>
+		  				<t:pagelink t:page="ShowAll" t:disabled="showAll">All Celebrities</t:pagelink><br/>
+		  				<t:pagelink t:page="AddCelebrity" t:disabled="addCelebrity">Add New</t:pagelink>
+					</t:if>
+				</td>
+				<td>
+					<t:body/>
+				</td>
+			</tr>
+		</table>
 	</body>
 </html>

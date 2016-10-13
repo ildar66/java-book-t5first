@@ -2,10 +2,17 @@ package com.packtpub.celebrities.components;
 
 import java.util.Locale;
 
+import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.ioc.annotations.Inject;
+import org.apache.tapestry5.runtime.Component;
 import org.apache.tapestry5.services.PersistentLocale;
+
+import com.packtpub.celebrities.pages.AddCelebrity;
+import com.packtpub.celebrities.pages.Registration;
+import com.packtpub.celebrities.pages.ShowAll;
+import com.packtpub.celebrities.pages.Start;
 
 public class Border {
 	@Inject
@@ -14,6 +21,30 @@ public class Border {
 	private Locale currentLocale;
 	@Persist
 	private String localeLabel;
+
+	@Inject
+	private ComponentResources resources;
+
+	private String getPageName() {
+		Component page = resources.getContainer();
+		return page.getClass().getName();
+	}
+
+	public boolean isNotStart() {
+		return !getPageName().equals(Start.class.getName());
+	}
+
+	public boolean isRegistration() {
+		return getPageName().equals(Registration.class.getName());
+	}
+
+	public boolean isShowAll() {
+		return getPageName().equals(ShowAll.class.getName());
+	}
+
+	public boolean isAddCelebrity() {
+		return getPageName().equals(AddCelebrity.class.getName());
+	}
 
 	public String getLocaleLabel() {
 		if (localeLabel == null) {
