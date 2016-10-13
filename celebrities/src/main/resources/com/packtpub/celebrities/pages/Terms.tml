@@ -1,4 +1,4 @@
-<t:border t:pageTitle="Registration"
+<t:border t:pageTitle="Terms and Conditions"
 	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
 	<p>Miscellaneous terms and conditions can be found here.</p>
 </t:border>

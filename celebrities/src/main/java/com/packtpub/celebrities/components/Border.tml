@@ -1,6 +1,6 @@
 <html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
 	<head>
-		<title>Celebrity Collector</title>
+		<title>Celebrity Collector: ${pageTitle}</title>
 		<link rel="stylesheet" href="${asset:context:/assets/styles.css}" type="text/css" />
 	</head>
 	<body>

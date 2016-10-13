@@ -1,4 +1,4 @@
-	<t:border xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<t:border t:pageTitle="Home" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
 		<h1>${message:celebrity-collector}</h1>
 
         <p> ${message:login-here}: </p>

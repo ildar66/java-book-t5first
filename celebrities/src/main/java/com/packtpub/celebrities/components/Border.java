@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.annotations.OnEvent;
+import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.runtime.Component;
@@ -24,6 +25,13 @@ public class Border {
 
 	@Inject
 	private ComponentResources resources;
+
+	@Parameter(required = true, defaultPrefix = "literal")
+	private String pageTitle;
+
+	public String getPageTitle() {
+		return pageTitle;
+	}
 
 	private String getPageName() {
 		Component page = resources.getContainer();

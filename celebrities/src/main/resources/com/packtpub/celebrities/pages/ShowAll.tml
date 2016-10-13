@@ -1,4 +1,4 @@
-<t:border t:pageTitle="Registration" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">        <h1>All Celebrities in Collection</h1>
+<t:border t:pageTitle="All Celebrities in Collection" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">        <h1>All Celebrities in Collection</h1>
 
  <!--        <table width="100%">
             <tr t:type="loop" t:source="allCelebrities" 

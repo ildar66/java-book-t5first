@@ -1,4 +1,4 @@
-<t:border xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+<t:border t:pageTitle="Add Celebrity" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
         <h1>Adding New Celebrity</h1>
 <!-- 
         <t:beaneditform t:id="celebrity" t:submitLabel="Save" remove="id"
