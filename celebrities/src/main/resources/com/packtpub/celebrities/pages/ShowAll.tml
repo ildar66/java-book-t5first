@@ -36,6 +36,13 @@
 	</t:form>
 	<p>Selected Celebrity: ${selectedCelebrityName}</p>
 	
+	<t:form>
+		<t:errors/>
+		<t:label for="testDate">Date test</t:label>:
+		<t:dateinput t:date="theDate" t:id="testDate" t:dateFrom="lowerLimit"/>
+		<input type="submit" value="Submit"/>
+	</t:form>
+	
 	<a href="#" t:type="PageLink" t:page="AddCelebrity">Add new Celebrity</a><br/>
 	
 	<a href="#" t:type="PageLink" t:page="Start">Back to the Start Page</a>

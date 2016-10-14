@@ -1,6 +1,7 @@
 package com.packtpub.celebrities.pages;
 
 import java.text.Format;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.tapestry5.SelectModel;
@@ -93,4 +94,20 @@ public class ShowAll {
 		return selectedCelebrity.getFirstName() + " "
 				+ selectedCelebrity.getLastName();
 	}
+
+	@Persist
+	private Date theDate;
+
+	public Date getTheDate() {
+		return theDate;
+	}
+
+	public void setTheDate(Date theDate) {
+		this.theDate = theDate;
+	}
+
+	public Date getLowerLimit() {
+		return new Date();
+	}
+
 }
