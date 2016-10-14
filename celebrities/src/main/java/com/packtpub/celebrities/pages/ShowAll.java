@@ -3,15 +3,21 @@ package com.packtpub.celebrities.pages;
 import java.text.Format;
 import java.util.List;
 
+import org.apache.tapestry5.SelectModel;
+import org.apache.tapestry5.ValueEncoder;
 import org.apache.tapestry5.annotations.InjectPage;
+import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.grid.GridDataSource;
 
 import com.packtpub.celebrities.data.IDataSource;
 import com.packtpub.celebrities.model.Celebrity;
 import com.packtpub.celebrities.model.User;
+import com.packtpub.celebrities.util.CelebrityEncoder;
+import com.packtpub.celebrities.util.CelebritySelectModel;
 import com.packtpub.celebrities.util.CelebritySource;
 import com.packtpub.celebrities.util.Formats;
+
 //import org.apache.tapestry5.annotations.OnEvent;
 
 public class ShowAll {
@@ -60,5 +66,31 @@ public class ShowAll {
 
 	public Format getDateFormat() {
 		return Formats.getDateFormat();
+	}
+
+	public SelectModel getCelebrityModel() {
+		return new CelebritySelectModel(getAllCelebrities());
+	}
+
+	public ValueEncoder<Celebrity> getCelebrityEncoder() {
+		return new CelebrityEncoder(dataSource);
+	}
+
+	@Persist
+	private Celebrity selectedCelebrity;
+
+	public Celebrity getSelectedCelebrity() {
+		return selectedCelebrity;
+	}
+
+	public void setSelectedCelebrity(Celebrity selectedCelebrity) {
+		this.selectedCelebrity = selectedCelebrity;
+	}
+
+	public String getSelectedCelebrityName() {
+		if (selectedCelebrity == null)
+			return "";
+		return selectedCelebrity.getFirstName() + " "
+				+ selectedCelebrity.getLastName();
 	}
 }

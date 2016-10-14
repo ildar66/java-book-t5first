@@ -29,6 +29,12 @@
 			</t:pagelink>
 		</t:parameter>
 	</t:grid>
+	<br />
+	<t:form>
+   		<t:select t:model="celebrityModel" t:value="selectedCelebrity" t:encoder="celebrityEncoder"/>
+    	<input type="submit" value="Submit"/>
+	</t:form>
+	<p>Selected Celebrity: ${selectedCelebrityName}</p>
 	
 	<a href="#" t:type="PageLink" t:page="AddCelebrity">Add new Celebrity</a><br/>
 	
