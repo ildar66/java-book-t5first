@@ -75,7 +75,7 @@ public class AppModule {
 		// locale names;
 		// the first locale name is the default when there's no reasonable
 		// match).
-		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,de");
+		configuration.add(SymbolConstants.SUPPORTED_LOCALES, "en,de,ru");
 	}
 
 	/**
