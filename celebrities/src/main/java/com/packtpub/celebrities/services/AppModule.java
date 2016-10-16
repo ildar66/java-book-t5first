@@ -44,6 +44,7 @@ public class AppModule {
 		// Use service builder methods (example below) when the implementation
 		// is provided inline, or requires more initialization than simply
 		// invoking the constructor.
+		binder.bind(SupportedLocales.class, SupportedLocalesImpl.class);
 	}
 
 	public static void contributeFactoryDefaults(

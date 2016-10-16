@@ -5,8 +5,8 @@
 	</head>
 	<body>
 		<p align="right">
-			<t:localeswitcher t:supportedLocales="en,de"/>
-			<!-- <t:localeswitcher/> -->
+			<!-- <t:localeswitcher t:supportedLocales="en,de"/> -->
+			<t:localeswitcher/>
 			<!-- <img src="${asset:context:/assets/flag.gif}" align="middle" />
 			<t:actionlink t:id="switchlocale">${localeLabel}</t:actionlink> -->
 		</p>

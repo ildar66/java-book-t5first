@@ -1,14 +1,14 @@
 package com.packtpub.celebrities.components;
 
-import java.util.Locale;
+//import java.util.Locale;
 
 import org.apache.tapestry5.ComponentResources;
-import org.apache.tapestry5.annotations.OnEvent;
+//import org.apache.tapestry5.annotations.OnEvent;
 import org.apache.tapestry5.annotations.Parameter;
-import org.apache.tapestry5.annotations.Persist;
+//import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.runtime.Component;
-import org.apache.tapestry5.services.PersistentLocale;
+//import org.apache.tapestry5.services.PersistentLocale;
 
 import com.packtpub.celebrities.pages.AddCelebrity;
 import com.packtpub.celebrities.pages.Registration;

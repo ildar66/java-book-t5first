@@ -4,20 +4,20 @@ import java.util.Locale;
 
 import org.apache.tapestry5.SelectModel;
 import org.apache.tapestry5.ValueEncoder;
-import org.apache.tapestry5.annotations.Parameter;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.PersistentLocale;
 
+import com.packtpub.celebrities.services.SupportedLocales;
 import com.packtpub.celebrities.util.LocaleEncoder;
 import com.packtpub.celebrities.util.LocaleSelectModel;
 
 public class LocaleSwitcher {
 
-	// @Inject
-	// private SupportedLocales supportedLocales;
+	@Inject
+	private SupportedLocales supportedLocales;
 
-	@Parameter(defaultPrefix = "literal", required = true)
-	private String supportedLocales;
+	// @Parameter(defaultPrefix = "literal", required = true)
+	// private String supportedLocales;
 
 	@Inject
 	private PersistentLocale persistentLocale;
@@ -31,8 +31,8 @@ public class LocaleSwitcher {
 	}
 
 	public SelectModel getLocaleModel() {
-		return new LocaleSelectModel(supportedLocales);
-		// return new LocaleSelectModel(supportedLocales.getSupportedLocales());
+		// return new LocaleSelectModel(supportedLocales);
+		return new LocaleSelectModel(supportedLocales.getSupportedLocales());
 	}
 
 	public ValueEncoder<Locale> getLocaleEncoder() {
