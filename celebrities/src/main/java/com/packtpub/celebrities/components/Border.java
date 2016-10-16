@@ -16,12 +16,12 @@ import com.packtpub.celebrities.pages.ShowAll;
 import com.packtpub.celebrities.pages.Start;
 
 public class Border {
-	@Inject
+/*	@Inject
 	private PersistentLocale persistentLocale;
 	@Inject
 	private Locale currentLocale;
 	@Persist
-	private String localeLabel;
+	private String localeLabel;*/
 
 	@Inject
 	private ComponentResources resources;
@@ -53,7 +53,7 @@ public class Border {
 	public boolean isAddCelebrity() {
 		return getPageName().equals(AddCelebrity.class.getName());
 	}
-
+/*
 	public String getLocaleLabel() {
 		if (localeLabel == null) {
 			if (currentLocale.equals(Locale.GERMAN)) {
@@ -73,5 +73,5 @@ public class Border {
 		} else {
 			persistentLocale.set(Locale.GERMAN);
 		}
-	}
+	}*/
 }
